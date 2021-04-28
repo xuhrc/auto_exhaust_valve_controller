@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# request speed and rpm data from ELM327 Wifi OBDII device via socket
 import socket
 import datetime
 import time

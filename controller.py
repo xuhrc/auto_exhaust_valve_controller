@@ -10,14 +10,20 @@ def current_milli_time():
 
 
 if __name__ == '__main__':
+    # using artsure OBDII device
+    # init the receiver threaq
     # receiver = obd_udp_receiver.ObdReceiver()
     # receiver.start()
 
     while True:
         try:
             current = current_milli_time()
+            # using artsure OBDII device
             # obd_udp_receiver.monitor(receiver)
+
+            # using elm327 wifi device
             elm327.monitor()
+
             cost = current_milli_time() - current
         except Exception as e:
             print('monitor loop failed')
